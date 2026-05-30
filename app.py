@@ -40,7 +40,7 @@ st.write("* Valeria Valdez Mendoza")
 st.write("* Eric Emanuel Yaxi Celaya")
 
 st.write("**Escuela:** CETis 64")
-st.write("**Materia:** Cultura Digital II")
+st.write("**Materia:** Submodulo II")
 st.write("**Maestra:** Concepción de la Luz Mendoza Mendoza")
 
 # --- SECCIÓN 2: EL HUB INTERACTIVO (Fase 3) ---
