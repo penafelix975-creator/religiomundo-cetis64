@@ -34,6 +34,13 @@ def preguntar_a_ia(pregunta_alumno):
 # 2. DISEÑO DE LA INTERFAZ
 # ==========================================
 st.title("🌍 Religiomundo: El Hub Intercultural")
+# 2. AQUÍ PEGA LA IMAGEN (Justo abajo de los títulos)
+st.image(
+    "https://elordenmundial.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/08/portada-religiones-cristianismo-islam-judaismo-confucianismo-sintoismo.jpg.webp",
+    caption="Las grandes religiones y filosofías del mundo",
+    use_container_width=True
+)
+st.write("---") # Esto pone una línea divisoria muy estética
 
 # --- SECCIÓN 1: PRESENTACIÓN DEL EQUIPO (Fase 3) ---
 st.markdown("---")
