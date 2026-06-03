@@ -13,7 +13,7 @@ try:
     genai.configure(api_key=CONTRASENA_GEMINI)
     
     # EL CAMBIO CLAVE: Nombre exacto del modelo en minúsculas para que no falle
-    model = genai.GenerativeModel('gemini-3.5-flash')
+    model = genai.GenerativeModel('gemini-3.1-flash-lite')
     
 except Exception as e:
     print(f"Error al configurar la IA: {e}")
