@@ -1,29 +1,35 @@
 import streamlit as st
-import urllib.request
-import urllib.parse
+import requests
 
-# ==========================================
-# 1. CONFIGURACIÓN DE LA PÁGINA
-# ==========================================
-st.set_page_config(page_title="Religiomundo", page_icon="🌍", layout="wide")
-
-# La función mágica de conexión limpia con el chatbot
 def preguntar_a_ia(pregunta_alumno):
-    instrucciones = (
-        "Actúa como un historiador y experto en religiones comparadas respetuoso. "
-        "Responde en español de forma concisa, educativa y promoviendo el respeto intercultural. "
-        "No des opiniones personales, solo hechos históricos y símbolos sagrados."
-    )
-    texto_completo = f"{instrucciones}\nPregunta: {pregunta_alumno}"
-    url = f"https://text.pollinations.ai/{urllib.parse.quote(texto_completo)}"
+    # Diccionario de respuestas rápidas por si el servidor externo falla
+    respuestas_emergencia = {
+        "islam": "El Islam es una religión monoteísta abrahámica basada en el Corán, el cual establece que no hay más dios que Alá y que Mahoma es su profeta. Sus cinco pilares incluyen la profesión de fe, la oración, la caridad, el ayuno y la peregrinación a La Meca.",
+        "cristianismo": "El Cristianismo es una religión monoteísta abrahámica basada en la vida y enseñanzas de Jesús de Nazaret. Es la religión más grande del mundo y sus textos sagrados se recopilan en la Biblia.",
+        "jesus": "Jesús de Nazaret es la figura central del Cristianismo, considerado por sus seguidores como el Hijo de Dios y el Mesías profetizado en el Antiguo Testamento.",
+        "judaísmo": "El Judaísmo es la religión monoteísta más antigua de las tres grandes religiones abrahámicas. Su texto sagrado principal es la Torá y su historia se basa en el pacto entre Dios y Abraham."
+    }
     
+    # Intentar conectar con la IA normal
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
-            return response.read().decode('utf-8')
-    except Exception as e:
-        return f"Error al conectar con el servidor: {e}"
-
+        url = f"https://text.pollinations.ai/{requests.utils.quote(pregunta_alumno)}?system=Eres un experto historiador en religiones del mundo. Responde de forma educativa, breve y respetuosa."
+        respuesta = requests.get(url, timeout=5)
+        
+        if respuesta.status_code == 200:
+            return respuesta.text
+        else:
+            # Si da error 429 o cualquier otro, buscar en las respuestas de emergencia
+            for clave, texto in respuestas_emergencia.items():
+                if clave in pregunta_alumno.lower():
+                    return texto
+            return "El servidor de IA está saturado en este momento. Intenta preguntar sobre 'Islam', 'Cristianismo' o 'Judaísmo', o reintenta en unos minutos."
+            
+    except:
+        # En caso de que se quede sin internet por completo
+        for clave, texto in respuestas_emergencia.items():
+            if clave in pregunta_alumno.lower():
+                return texto
+        return "Conexión inestable. Por favor, intenta de nuevo en un momento."
 # ==========================================
 # 2. DISEÑO DE LA INTERFAZ
 # ==========================================
