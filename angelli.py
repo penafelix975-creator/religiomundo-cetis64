@@ -47,7 +47,7 @@ st.write("---") # Esto pone una línea divisoria muy estética
 st.markdown("---")
 st.header("🏠 Inicio y Presentación")
 st.write("### Integrantes:")
-sst.write("### ✨ Presentación Individual")
+st.write("### ✨ Presentación Individual")
 st.write("**Estudiante:** Angelli Enríquez Nieto")
 st.write("**Escuela:** CETis 64")
 st.write("**Materia:** Cultura Digital II")
