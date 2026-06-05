@@ -53,10 +53,6 @@ st.write("**Escuela:** CETis 64")
 st.write("**Materia:** Cultura Digital II")
 st.write("**Maestra:** Concepción de la Luz Mendoza Mendoza")
 
-st.write("**Escuela:** CETis 64")
-st.write("**Materia:** Submodulo II")
-st.write("**Maestra:** Concepción de la Luz Mendoza Mendoza")
-
 # --- SECCIÓN 2: EL HUB INTERACTIVO (Fase 3) ---
 st.markdown("---")
 st.write("### 🤖 Pregúntale a :red[Teo: Tu Guía Intercultural]")
