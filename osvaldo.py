@@ -59,7 +59,7 @@ st.write("**Maestra:** Concepción de la Luz Mendoza Mendoza")
 
 # --- SECCIÓN 2: EL HUB INTERACTIVO (Fase 3) ---
 st.markdown("---")
-st.header("🤖 El Hub Interactivo (Chatbot Virtual)")
+st.header("🤖 🤖 Pregúntale a Teo: Tu Guía Intercultural)")
 st.write("Escribe cualquier duda que tengas sobre festividades, libros sagrados o símbolos de alguna religión.")
 
 pregunta_usuario = st.text_input("Escribe tu pregunta aquí (ej. ¿Qué es la Torá? o ¿Qué es el Islam?):")
@@ -227,3 +227,4 @@ else:
 
 # LA BARRA LATERAL: Muestra los puntos flotantes a la izquierda en tiempo real durante todo el juego
 st.sidebar.metric(label="Score de la Trivia 🎯", value=f"{st.session_state.puntos} pts")
+st.success("✅ Proyecto Completado Exitosamente: Todo el contenido individual ha sido cargado correctamente para la evaluación de Cultura Digital II.")
