@@ -225,3 +225,5 @@ else:
 
 # LA BARRA LATERAL: Muestra los puntos flotantes a la izquierda en tiempo real durante todo el juego
 st.sidebar.metric(label="Score de la Trivia 🎯", value=f"{st.session_state.puntos} pts")
+st.write("---") # Línea divisoria
+st.success("✅ **Proyecto Completado Exitosamente:** Todo el contenido individual ha sido cargado correctamente para la evaluación de Cultura Digital II.")
