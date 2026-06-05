@@ -59,7 +59,7 @@ st.write("**Maestra:** Concepción de la Luz Mendoza Mendoza")
 
 # --- SECCIÓN 2: EL HUB INTERACTIVO (Fase 3) ---
 st.markdown("---")
-st.header("🤖 🤖 Pregúntale a Teo: Tu Guía Intercultural)")
+st.write("### 🤖 Pregúntale a :red[Teo: Tu Guía Intercultural]")
 st.write("Escribe cualquier duda que tengas sobre festividades, libros sagrados o símbolos de alguna religión.")
 
 pregunta_usuario = st.text_input("Escribe tu pregunta aquí (ej. ¿Qué es la Torá? o ¿Qué es el Islam?):")
