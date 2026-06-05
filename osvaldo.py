@@ -34,7 +34,7 @@ def preguntar_a_ia(pregunta_alumno):
 # 2. DISEÑO DE LA INTERFAZ
 # ==========================================
 st.markdown("# :red[⚽ Religiomundo: El Hub Intercultural]")
-   st.markdown("### :red[🐐 Versión Individual: Osvaldo Peña]")
+st.markdown("### :red[🦙 Versión Individual: Osvaldo Peña]")
 # 2. AQUÍ PEGA LA IMAGEN (Justo abajo de los títulos)
 st.image(
     "https://elordenmundial.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/08/portada-religiones-cristianismo-islam-judaismo-confucianismo-sintoismo.jpg.webp",
