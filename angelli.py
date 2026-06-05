@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 st.set_page_config(page_title="Religiomundo - Angelli", page_icon="✨")
+st.balloons()  # Esto lanza globos de celebración en la pantalla automáticamente
 def preguntar_a_ia(pregunta_alumno):
     # Diccionario de respuestas rápidas por si el servidor externo falla
     respuestas_emergencia = {
