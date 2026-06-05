@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-st.set_page_config(page_title="Religiomundo - Osvaldo", page_icon="⚽")
+st.set_page_config(page_title="Religiomundo - Osvaldo (Chivas)", page_icon="⚽", layout="centered")
 def preguntar_a_ia(pregunta_alumno):
     # Diccionario de respuestas rápidas por si el servidor externo falla
     respuestas_emergencia = {
